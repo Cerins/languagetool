@@ -5,11 +5,36 @@ public class Symbol extends Object {
     return terminal;
   }
 
-  public Symbol(boolean terminal, String value, String token) {
+  public Symbol(boolean terminal, String value, String token, Integer initialPosition) {
     this.terminal = terminal;
     this.value = value;
     this.tag = token;
+    this.initialPosition = initialPosition;
   }
+
+  public Symbol(boolean terminal, String value, String token) {
+    this(terminal, value, token, null);
+  }
+
+  public Symbol[] getChildren() {
+    return children;
+  }
+
+  public void setChildren(Symbol[] children) {
+    this.children = children;
+  }
+
+  protected Symbol[] children;
+
+  public Integer getInitialPosition() {
+    return initialPosition;
+  }
+
+  public void setInitialPosition(Integer initialPosition) {
+    this.initialPosition = initialPosition;
+  }
+
+  protected Integer initialPosition;
 
   public void setTerminal(boolean terminal) {
     this.terminal = terminal;

@@ -2,9 +2,20 @@ package org.languagetool.cfg;
 
 public class Token {
 
-  public Token(String value, String tag) {
+  public Integer getInitialPosition() {
+    return initialPosition;
+  }
+
+  public void setInitialPosition(Integer initialPosition) {
+    this.initialPosition = initialPosition;
+  }
+
+  private Integer initialPosition;
+
+  public Token(String value, String tag, Integer initialPosition) {
     this.value = value;
     this.tag = tag;
+    this.initialPosition = initialPosition;
   }
 
   private String value;

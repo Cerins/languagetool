@@ -3,18 +3,43 @@ package org.languagetool.cfg.rules;
 import org.languagetool.cfg.Symbol;
 import org.languagetool.cfg.Token;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class TerminalCFGRule extends CFGRule {
-  public TerminalCFGRule(String nonTerminal, Token terminal) {
+
+  private Pattern tagPattern;
+
+  public TerminalCFGRule(String nonTerminal, Token terminal, Pattern tagPattern) {
     super(
       nonTerminal,
-      new Symbol[]{new Symbol(true, terminal.getValue(), terminal.getTag())}
+      new Symbol[]{new Symbol(true, terminal.getValue(), terminal.getTag(), terminal.getInitialPosition())}
     );
+    this.tagPattern = tagPattern;
   }
+
+  public TerminalCFGRule(String nonTerminal, Token terminal) {
+    this(nonTerminal, terminal, null);
+  }
+
+  private static boolean symbolMatchesPattern(Symbol s, Pattern p) {
+    if(s == null) return false;
+    String tag = s.getTag();
+    if(tag == null) return false;
+    Matcher m = p.matcher(tag);
+    return m.matches();
+  }
+
   @Override
   public Symbol matchesRight(Symbol[] s) {
     if(s.length != 1) return null;
     if(s[0].equals(right[0])) {
-      Symbol res = new Symbol(false, left.getValue(), left.getTag());
+      if(tagPattern != null && !symbolMatchesPattern(s[0], tagPattern)) {
+        return null;
+      }
+      // Inherit tags from given symbol
+      Symbol res = new Symbol(false, left.getValue(), s[0].getTag());
+      res.setChildren(s);
       return res;
     }
     return null;

@@ -4,10 +4,14 @@ import org.languagetool.cfg.Symbol;
 import org.languagetool.cfg.Token;
 
 public class ConcatCFGRule extends CFGRule {
+
+  private ITagMatcher tm;
+
   public ConcatCFGRule(
     String nonTerminal,
     Token left,
-    Token right
+    Token right,
+    ITagMatcher tm
   ) {
     super(
       nonTerminal,
@@ -16,6 +20,14 @@ public class ConcatCFGRule extends CFGRule {
         new Symbol(false, right.getValue(), right.getTag())
       }
     );
+    this.tm = tm;
+  }
+  public ConcatCFGRule(
+    String nonTerminal,
+    Token left,
+    Token right
+  ) {
+    this(nonTerminal, left, right, null);
   }
 
   @Override
@@ -24,11 +36,21 @@ public class ConcatCFGRule extends CFGRule {
     if(s[0].equals(right[0]) &&
       s[1].equals(right[1]
       )) {
+      String resTag = null;
+      String aTag = right[0].getTag();
+      String bTag = right[1].getTag();
+      if(tm != null) {
+        if(!tm.matches(aTag, bTag)) {
+          return null;
+        }
+        resTag = tm.parentTag(aTag, bTag);
+      }
       Symbol res = new Symbol(
         false,
         left.getValue(),
-        left.getTag()
+        resTag
       );
+      res.setChildren(s);
       return res;
     }
     return null;

@@ -15,7 +15,7 @@ public class CFGTest {
   @Test
   public void testParseTerminalShouldMatch() {
     CFG cfg = new CFG();
-    Token toMatch = new Token("a", null);
+    Token toMatch = new Token("a", null, 0);
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
@@ -33,43 +33,43 @@ public class CFGTest {
   @Test
   public void testParseTerminalShouldntMatchNoSentence() {
     CFG cfg = new CFG();
-    Token toMatch = new Token("a", null);
+    Token toMatch = new Token("a", null, 0);
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
         toMatch
       )
     );
-    List<Token>[] setence = new List[]{
+    List<Token>[] sentence = new List[]{
     };
-    ParseResult result = cfg.parse(setence);
+    ParseResult result = cfg.parse(sentence);
     assertFalse(result.getMatches());
   }
 
   @Test
   public void testParseTerminalShouldntMatchOtherSymbol() {
     CFG cfg = new CFG();
-    Token toMatch = new Token("a", null);
+    Token toMatch = new Token("a", null, 0);
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
         toMatch
       )
     );
-    Token other = new Token("b", null);
+    Token other = new Token("b", null, 0);
     List<Token> firstWord = new LinkedList<>();
     firstWord.add(other);
-    List<Token>[] setence = new List[]{
+    List<Token>[] sentence = new List[]{
       firstWord
     };
-    ParseResult result = cfg.parse(setence);
+    ParseResult result = cfg.parse(sentence);
     assertFalse(result.getMatches());
   }
 
   @Test
   public void testParseTerminalShouldntMatchTooManySymbols() {
     CFG cfg = new CFG();
-    Token toMatch = new Token("a", null);
+    Token toMatch = new Token("a", null, 0);
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
@@ -81,23 +81,23 @@ public class CFGTest {
     firstWord.add(toMatch);
     List<Token> secondWord = new LinkedList<>();
     secondWord.add(toMatch);
-    List<Token>[] setence = new List[]{
+    List<Token>[] sentence = new List[]{
       firstWord,
       secondWord
     };
-    ParseResult result = cfg.parse(setence);
+    ParseResult result = cfg.parse(sentence);
     assertFalse(result.getMatches());
   }
   @Test
   public void testParseTerminalShouldMatchConcat() {
     CFG cfg = new CFG();
-    Token toMatch = new Token("a", null);
-    Token toMatch2 = new Token("b", null);
+    Token toMatch = new Token("a", null, 0);
+    Token toMatch2 = new Token("b", null, 1);
     cfg.addRule(
       new ConcatCFGRule(
         CFG.START_SYMBOL,
-        new Token("A", null),
-        new Token("B", null)
+        new Token("A", null, null),
+        new Token("B", null, null)
       )
     );
     cfg.addRule(
@@ -117,23 +117,23 @@ public class CFGTest {
     firstWord.add(toMatch);
     List<Token> secondWord = new LinkedList<>();
     secondWord.add(toMatch2);
-    List<Token>[] setence = new List[]{
+    List<Token>[] sentence = new List[]{
       firstWord,
       secondWord
     };
-    ParseResult result = cfg.parse(setence);
+    ParseResult result = cfg.parse(sentence);
     assertTrue(result.getMatches());
   }
   @Test
   public void testParseTerminalShouldntMatchConcatWrongSentence() {
     CFG cfg = new CFG();
-    Token toMatch = new Token("a", null);
-    Token toMatch2 = new Token("b", null);
+    Token toMatch = new Token("a", null, 0);
+    Token toMatch2 = new Token("b", null, 1);
     cfg.addRule(
       new ConcatCFGRule(
         CFG.START_SYMBOL,
-        new Token("A", null),
-        new Token("B", null)
+        new Token("A", null, null),
+        new Token("B", null, null)
       )
     );
     cfg.addRule(
@@ -152,11 +152,11 @@ public class CFGTest {
     firstWord.add(toMatch);
     List<Token> secondWord = new LinkedList<>();
     secondWord.add(toMatch);
-    List<Token>[] setence = new List[]{
+    List<Token>[] sentence = new List[]{
       firstWord,
       secondWord
     };
-    ParseResult result = cfg.parse(setence);
+    ParseResult result = cfg.parse(sentence);
     assertFalse(result.getMatches());
   }
 }
