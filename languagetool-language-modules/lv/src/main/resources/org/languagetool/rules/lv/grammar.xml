@@ -46,7 +46,7 @@ Please replace it with a proper ruleset for Latvian language -->
             </rule>
         </rulegroup>
         <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
-            <rule id="VĀRDKOPU_KALKS_2" name="Ņemt pirmo vietu">
+            <rule id="VĀRDKOPU_KALKS_2" name="Iegūt pirmo vietu">
                 <pattern>
                     <token inflected="yes">ņemt</token>
                     <token>pirmo</token>
@@ -57,13 +57,23 @@ Please replace it with a proper ruleset for Latvian language -->
             </rule>
         </rulegroup>
         <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
-            <rule id="VĀRDKOPU_KALKS_3" name="Pacelt jautājumu">
+            <rule id="VĀRDKOPU_KALKS_3" name="Izvirzīt jautājumu">
                 <pattern>
                     <token inflected="yes">pacelt</token>
                     <token>jautājumu</token>
                     </pattern>
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</suggestion> jautājumu</match>?</message>
                 <example>Izvirzīt jautājumu</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_4" name="Minēt piemērus">
+                <pattern>
+                    <token inflected="yes">pievest</token>
+                    <token>piemērus</token>
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">minēt</suggestion> piemērus</match>?</message>
+                <example>Minēt piemērus</example>
             </rule>
         </rulegroup>
     </category>
