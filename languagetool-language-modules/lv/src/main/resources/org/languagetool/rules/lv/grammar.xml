@@ -52,8 +52,18 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token>pirmo</token>
                     <token>vietu</token>
                 </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">īegūt</match> pirmo</suggestion> vietu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">iegūt</match> pirmo</suggestion> vietu</suggestion>?</message>
                 <example>Iegūt pirmo vietu</example>
+            </rule>
+        </rulegroup>
+        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_3" name="Pacelt jautājumu">
+                <pattern>
+                    <token inflected="yes">pacelt</token>
+                    <token>jautājumu</token>
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</suggestion> jautājumu</match>?</message>
+                <example>Izvirzīt jautājumu</example>
             </rule>
         </rulegroup>
     </category>
