@@ -192,6 +192,16 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pildīt</match>plānu</suggestion>?</message>
                 <example>Pildīt plānu</example>
             </rule>
-        </rulegroup>    
+        </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_17" name="Rakstīt ar datoru">
+                <pattern>
+                    <token inflected="yes">Rakstīt</token>
+		    <token>uz</token>
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Rakstīt</match>ar</suggestion>?</message>
+                <example>Rakstīt ar datoru</example>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
