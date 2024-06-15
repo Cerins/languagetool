@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 import org.languagetool.Language;
 import org.languagetool.UserConfig;
 import org.languagetool.rules.*;
+import org.languagetool.rules.lv.ExampleCFGRule;
 import org.languagetool.rules.lv.MorfologikLatvianSpellerRule;
 import org.languagetool.rules.spelling.SpellingCheckRule;
 import org.languagetool.synthesis.Synthesizer;
@@ -87,7 +88,8 @@ public class Latvian extends Language {
             new MorfologikLatvianSpellerRule(messages, this, userConfig, altLanguages),
             new UppercaseSentenceStartRule(messages, this),
             new WordRepeatRule(messages, this),
-            new MultipleWhitespaceRule(messages, this)
+            new MultipleWhitespaceRule(messages, this),
+            new ExampleCFGRule()
     );
   }
 

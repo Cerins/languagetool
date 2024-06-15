@@ -12,11 +12,11 @@ public class CFG {
 
   protected List<ICFGRule> rules = new LinkedList<>();
 
-  void addRule(ICFGRule rule) {
+  public void addRule(ICFGRule rule) {
     rules.add(rule);
   }
 
-  ParseResult parse(List<Token>[] tokens) {
+  public ParseResult parse(List<Token>[] tokens) {
     // Parse using cyk algorithm https://www.geeksforgeeks.org/cyk-algorithm-for-context-free-grammar/
     ParseResult result = new ParseResult();
     int n = tokens.length;
@@ -34,6 +34,7 @@ public class CFG {
           // Check if the rule matches one for token
           for(Token t: tokens[i]) {
             Symbol in = new Symbol(true, t.getValue(), t.getTag());
+            in.setInitialPosition(t.getInitialPosition());
             Symbol out = rule.matchesRight(in);
             if(out != null) {
               dp[i][i].add(out);
@@ -66,14 +67,17 @@ public class CFG {
         }
       }
     }
+    Symbol root = null;
     if(n > 0) {
       for(Symbol potentialStart: dp[0][n-1]) {
         if(potentialStart.getValue().equals(START_SYMBOL)) {
+          root = potentialStart;
           matches = true;
         }
       }
     }
     result.setMatches(matches);
+    result.setRoot(root);
     return result;
   }
 

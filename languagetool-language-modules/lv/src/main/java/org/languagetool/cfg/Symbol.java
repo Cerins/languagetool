@@ -12,8 +12,8 @@ public class Symbol extends Object {
     this.initialPosition = initialPosition;
   }
 
-  public Symbol(boolean terminal, String value, String token) {
-    this(terminal, value, token, null);
+  public Symbol(boolean terminal, String value, String tag) {
+    this(terminal, value, tag, null);
   }
 
   public Symbol[] getChildren() {
@@ -67,11 +67,11 @@ public class Symbol extends Object {
     if(o instanceof Symbol && o != null) {
       Symbol other = (Symbol) o;
       if(other.terminal != terminal) return false;
-      if(value == null) {
-        return other.value == null;
-      } else {
-        return value.equals(other.value);
+      // Set that symbol match each other if null
+      if(value == null  || other.value == null) {
+        return true;
       }
+      return value.equals(other.value);
     }
     return false;
   }

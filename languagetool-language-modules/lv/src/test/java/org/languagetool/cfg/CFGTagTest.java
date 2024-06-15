@@ -22,7 +22,7 @@ public class CFGTagTest {
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
-        toMatch,
+        "a",
         Pattern.compile("^a.+")
       )
     );
@@ -41,7 +41,7 @@ public class CFGTagTest {
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
-        toMatch,
+        "a",
         Pattern.compile("^c.+")
       )
     );
@@ -69,8 +69,8 @@ public class CFGTagTest {
     }
     ICFGRule concat = new ConcatCFGRule(
       "S",
-      new Token("A", "a", null),
-      new Token("B", "b", null),
+      "A",
+      "B",
       new TagMatcher()
     );
     Symbol[] in = new Symbol[]{
@@ -107,8 +107,8 @@ public class CFGTagTest {
     }
     ICFGRule concat = new ConcatCFGRule(
       "S",
-      new Token("A", "a", null),
-      new Token("B", "b", null),
+      "A",
+      "B",
       new TagMatcher()
     );
     Symbol[] in = new Symbol[]{

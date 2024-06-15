@@ -10,4 +10,15 @@ public class ParseResult {
   }
 
   private boolean matches;
+
+  public Symbol getRoot() {
+    return root;
+  }
+
+  public void setRoot(Symbol root) {
+    this.root = root;
+  }
+
+  private Symbol root;
+
 }

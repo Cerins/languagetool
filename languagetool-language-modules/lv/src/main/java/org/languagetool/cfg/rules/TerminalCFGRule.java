@@ -10,15 +10,15 @@ public class TerminalCFGRule extends CFGRule {
 
   private Pattern tagPattern;
 
-  public TerminalCFGRule(String nonTerminal, Token terminal, Pattern tagPattern) {
+  public TerminalCFGRule(String nonTerminal, String terminal, Pattern tagPattern) {
     super(
       nonTerminal,
-      new Symbol[]{new Symbol(true, terminal.getValue(), terminal.getTag(), terminal.getInitialPosition())}
+      new Symbol[]{new Symbol(true, terminal, null, null)}
     );
     this.tagPattern = tagPattern;
   }
 
-  public TerminalCFGRule(String nonTerminal, Token terminal) {
+  public TerminalCFGRule(String nonTerminal, String terminal) {
     this(nonTerminal, terminal, null);
   }
 
@@ -38,7 +38,12 @@ public class TerminalCFGRule extends CFGRule {
         return null;
       }
       // Inherit tags from given symbol
-      Symbol res = new Symbol(false, left.getValue(), s[0].getTag());
+      // This is needed to get the place
+      // TODO change
+      if(right[0] == null) {
+        s[0].setInitialPosition(null);
+      }
+      Symbol res = new Symbol(false, left.getValue(), s[0].getTag(), null);
       res.setChildren(s);
       return res;
     }

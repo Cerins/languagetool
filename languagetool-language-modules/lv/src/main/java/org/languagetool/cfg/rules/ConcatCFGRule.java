@@ -9,23 +9,23 @@ public class ConcatCFGRule extends CFGRule {
 
   public ConcatCFGRule(
     String nonTerminal,
-    Token left,
-    Token right,
+    String left,
+    String right,
     ITagMatcher tm
   ) {
     super(
       nonTerminal,
       new Symbol[]{
-        new Symbol(false, left.getValue(), left.getTag()),
-        new Symbol(false, right.getValue(), right.getTag())
+        new Symbol(false, left, null),
+        new Symbol(false, right, null)
       }
     );
     this.tm = tm;
   }
   public ConcatCFGRule(
     String nonTerminal,
-    Token left,
-    Token right
+    String left,
+    String right
   ) {
     this(nonTerminal, left, right, null);
   }
@@ -37,8 +37,8 @@ public class ConcatCFGRule extends CFGRule {
       s[1].equals(right[1]
       )) {
       String resTag = null;
-      String aTag = right[0].getTag();
-      String bTag = right[1].getTag();
+      String aTag = s[0].getTag();
+      String bTag = s[1].getTag();
       if(tm != null) {
         if(!tm.matches(aTag, bTag)) {
           return null;

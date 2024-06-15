@@ -11,7 +11,7 @@ public class CFGSymbolTree {
   public void testSymbolTree() {
     ICFGRule rule = new TerminalCFGRule(
       "S",
-      new Token("abc", "test1", null)
+      "abc"
     );
     Symbol in  = new Symbol(
       true,

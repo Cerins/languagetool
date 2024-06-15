@@ -19,7 +19,7 @@ public class CFGTest {
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
-        toMatch
+        "a"
       )
     );
     List<Token> firstWord = new LinkedList<>();
@@ -37,7 +37,7 @@ public class CFGTest {
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
-        toMatch
+        "a"
       )
     );
     List<Token>[] sentence = new List[]{
@@ -53,7 +53,7 @@ public class CFGTest {
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
-        toMatch
+        "a"
       )
     );
     Token other = new Token("b", null, 0);
@@ -73,7 +73,7 @@ public class CFGTest {
     cfg.addRule(
       new TerminalCFGRule(
         CFG.START_SYMBOL,
-        toMatch
+        "a"
       )
     );
 //    Token other = new Token("b", null);
@@ -96,20 +96,20 @@ public class CFGTest {
     cfg.addRule(
       new ConcatCFGRule(
         CFG.START_SYMBOL,
-        new Token("A", null, null),
-        new Token("B", null, null)
+        "A",
+        "B"
       )
     );
     cfg.addRule(
       new TerminalCFGRule(
         "A",
-        toMatch
+        "a"
       )
     );
     cfg.addRule(
       new TerminalCFGRule(
         "B",
-        toMatch2
+        "b"
       )
     );
 //    Token other = new Token("b", null);
@@ -132,20 +132,20 @@ public class CFGTest {
     cfg.addRule(
       new ConcatCFGRule(
         CFG.START_SYMBOL,
-        new Token("A", null, null),
-        new Token("B", null, null)
+        "A",
+        "B"
       )
     );
     cfg.addRule(
       new TerminalCFGRule(
         "A",
-        toMatch
+        "a"
       )
     );
     cfg.addRule(
       new TerminalCFGRule(
         "B",
-        toMatch2
+        "b"
       )
     );
     List<Token> firstWord = new LinkedList<>();
