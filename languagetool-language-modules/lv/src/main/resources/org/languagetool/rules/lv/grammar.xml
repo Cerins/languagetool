@@ -145,5 +145,15 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>Runāt par jautājumu</example>
             </rule>
         </rulegroup>
+        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_12" name="Ieviest sistēmu">
+                <pattern>
+                    <token inflected="yes">Pāriet</token>
+                    <token>uz</token>
+                </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieviest</match>sistēmu</suggestion>?</message>
+                <example>Ieviest sistēmu</example>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
