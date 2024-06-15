@@ -173,5 +173,15 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>Runāt par svarīgu jautājumu</example>
             </rule>
         </rulegroup>
+        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_15" name="Ievērot instrukciju">
+                <pattern>
+                    <token inflected="yes">Pieturēties</token>
+		    <token>pie</token>
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">ievērot</match>instrukciju</suggestion>?</message>
+                <example>Ievērot instrukciju</example>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
