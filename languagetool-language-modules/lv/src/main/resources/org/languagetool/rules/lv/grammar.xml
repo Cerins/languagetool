@@ -125,5 +125,15 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>Runāt par jautājumiem</example>
             </rule>
         </rulegroup>
+        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_10" name="Radīt protestu">
+                <pattern>
+                    <token inflected="yes">novest</token>
+                    <token>līdz</token>
+                </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">radīt</match>protestu</suggestion>?</message>
+                <example>Radīt protestu</example>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
