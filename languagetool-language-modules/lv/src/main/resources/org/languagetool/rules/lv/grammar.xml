@@ -164,5 +164,14 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>Nodarboties ar politiku</example>
             </rule>
         </rulegroup>
+        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_14" name="Runāt par svarīgu jautājumu">
+                <pattern>
+                    <token inflected="yes">Pieskarties</token>
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt par</match>svarīgu jautājumu</suggestion>?</message>
+                <example>Runāt par svarīgu jautājumu</example>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
