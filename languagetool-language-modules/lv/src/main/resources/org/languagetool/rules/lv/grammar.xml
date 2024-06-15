@@ -106,5 +106,15 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>Ieteikt pirmo variantu</example>
             </rule>
         </rulegroup>
+        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_8" name="Censties noslēgt līgumu">
+                <pattern>
+                    <token inflected="yes">Iet</token>
+                    <token>uz</token>
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Censties noslēgt</suggestion> līgumu</match>?</message>
+                <example>Censties noslēgt līgumu</example>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
