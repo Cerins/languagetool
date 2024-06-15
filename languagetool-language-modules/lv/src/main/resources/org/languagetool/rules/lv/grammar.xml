@@ -212,5 +212,15 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>Kontrolēt darbu</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_19" name="Ieinteresēties par ceļošanu">
+                <pattern>
+                    <token inflected="yes">Saslimt</token>
+		    <token>ar</token>
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieinteresēties par</match>ceļošanu</suggestion>?</message>
+                <example>Ieinteresēties par ceļošanu</example>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
