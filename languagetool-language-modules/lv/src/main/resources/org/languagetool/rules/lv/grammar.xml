@@ -96,5 +96,15 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>Izvirzīt jautājumu</example>
             </rule>
         </rulegroup>
+        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_7" name="Ieteikt pirmo variantu">
+                <pattern>
+                    <token inflected="yes">Iestāties</token>
+                    <token>par</token>
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieteikt</suggestion> pirmo</match>?</message>
+                <example>Ieteikt pirmo variantu</example>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
