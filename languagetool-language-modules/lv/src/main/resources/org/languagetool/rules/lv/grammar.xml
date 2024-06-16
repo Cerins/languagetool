@@ -104,7 +104,7 @@ Please replace it with a proper ruleset for Latvian language -->
 		    <token>pirmo</token>
 		    <token>variantu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieteikt</suggestion>pirmo</match>variantu</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieteikt</match> pirmo</suggestion> variantu</suggestion>?</message>
                 <example>Ieteikt pirmo variantu</example>
             </rule>
         </rulegroup>
