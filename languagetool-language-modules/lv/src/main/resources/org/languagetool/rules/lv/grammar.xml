@@ -82,7 +82,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token inflected="yes">piegriezt</token>
                     <token>uzmanību</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pievērst</suggestion> uzmanību</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pievērst</match> uzmanību</suggestion>?</message>
                 <example>Pievērst uzmanību</example>
             </rule>
         </rulegroup>
