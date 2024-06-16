@@ -92,7 +92,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token inflected="yes">stādīt</token>
                     <token>jautājumu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Izvirzīt</suggestion> jautājumu</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Izvirzīt</match> jautājumu</suggestion>?</message>
                 <example>Izvirzīt jautājumu</example>
             </rule>
         </rulegroup>
