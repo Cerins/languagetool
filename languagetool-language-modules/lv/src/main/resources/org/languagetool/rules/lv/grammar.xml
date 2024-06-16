@@ -134,8 +134,9 @@ Please replace it with a proper ruleset for Latvian language -->
                 <pattern>
                     <token inflected="yes">novest</token>
                     <token>līdz</token>
+		    <token>protestam</token>
                 </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">radīt</match>protestu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">radīt</match> protestu</suggestion>?</message>
                 <example>Radīt protestu</example>
             </rule>
         </rulegroup>
