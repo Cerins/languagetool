@@ -115,7 +115,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token>uz</token>
 		    <token>līgumu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Censties</suggestion> noslēgt</suggestion> līgumu</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Censties</match> noslēgt</match> līgumu</suggestion>?</message>
                 <example>Censties noslēgt līgumu</example>
             </rule>
         </rulegroup>
