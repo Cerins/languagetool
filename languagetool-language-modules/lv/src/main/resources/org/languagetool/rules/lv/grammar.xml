@@ -59,10 +59,10 @@ Please replace it with a proper ruleset for Latvian language -->
         <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_3" name="Izvirzīt jautājumu">
                 <pattern>
-                    <token inflected="yes">pacelt</token>
+                    <token inflected="yes">Pacelt</token>
                     <token>jautājumu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</suggestion> jautājumu</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</match> jautājumu</suggestion>?</message>
                 <example>Izvirzīt jautājumu</example>
             </rule>
         </rulegroup>
@@ -72,7 +72,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token inflected="yes">pievest</token>
                     <token>piemērus</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">minēt</suggestion> piemērus</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Minēt</suggestion> piemērus</match>?</message>
                 <example>Minēt piemērus</example>
             </rule>
         </rulegroup>
@@ -82,7 +82,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token inflected="yes">piegriezt</token>
                     <token>uzmanību</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">pievērst</suggestion> uzmanību</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pievērst</suggestion> uzmanību</match>?</message>
                 <example>Pievērst uzmanību</example>
             </rule>
         </rulegroup>
@@ -92,7 +92,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token inflected="yes">stādīt</token>
                     <token>jautājumu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</suggestion> jautājumu</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Izvirzīt</suggestion> jautājumu</match>?</message>
                 <example>Izvirzīt jautājumu</example>
             </rule>
         </rulegroup>
@@ -113,8 +113,9 @@ Please replace it with a proper ruleset for Latvian language -->
                 <pattern>
                     <token inflected="yes">Iet</token>
                     <token>uz</token>
+		    <token>līgumu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Censties noslēgt</suggestion> līgumu</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Censties</suggestion> noslēgt</suggestion> līgumu</match>?</message>
                 <example>Censties noslēgt līgumu</example>
             </rule>
         </rulegroup>
