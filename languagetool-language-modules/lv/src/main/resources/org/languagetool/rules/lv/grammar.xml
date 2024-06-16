@@ -89,7 +89,7 @@ Please replace it with a proper ruleset for Latvian language -->
         <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_6" name="Izvirzīt jautājumu">
                 <pattern>
-                    <token inflected="yes">izvirzīt</token>
+                    <token inflected="yes">stādīt</token>
                     <token>jautājumu</token>
                     </pattern>
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</suggestion> jautājumu</match>?</message>
