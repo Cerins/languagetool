@@ -123,8 +123,9 @@ Please replace it with a proper ruleset for Latvian language -->
             <rule id="VĀRDKOPU_KALKS_9" name="Runāt par jautājumiem">
                 <pattern>
                     <token inflected="yes">Cilāt</token>
-                    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Runāt par</suggestion>jautājumiem</match>?</message>
+                    <token>jautājumus</token>	
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Runāt</match> par</suggestion> jautājumiem</suggestion>?</message>
                 <example>Runāt par jautājumiem</example>
             </rule>
         </rulegroup>
