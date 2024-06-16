@@ -72,7 +72,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token inflected="yes">pievest</token>
                     <token>piemērus</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Minēt</suggestion> piemērus</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Minēt</match> piemērus</suggestion>?</message>
                 <example>Minēt piemērus</example>
             </rule>
         </rulegroup>
