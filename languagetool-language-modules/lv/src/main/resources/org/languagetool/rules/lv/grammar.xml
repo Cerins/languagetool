@@ -331,6 +331,17 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>audzināšana atbilstoši tradīcijām</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_30" name="strādāt par grāmatvedi ">
+                <pattern>
+                    <token inflected="yes">Izpildīt</token>
+		    <token>grāmatveža</token>
+		    <token>vietu</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Strādāt</match> par</match> grāmatvedi</suggestion>?</message>
+                <example>strādāt par grāmatvedi </example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
