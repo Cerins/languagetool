@@ -268,7 +268,18 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Spriest</match> pēc</match> datiem</suggestion>?</message>
                 <example>spriest pēc datiem</example>
             </rule>
-        </rulegroup>    
+        </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_24" name="pārvarēt grūtības">
+                <pattern>
+                    <token inflected="yes">Iziet</token>
+		    <token>no</token>
+		    <token>grūtībām</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">pārvarēt</match> grūtības</suggestion>?</message>
+                <example>pārvarēt grūtības</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
