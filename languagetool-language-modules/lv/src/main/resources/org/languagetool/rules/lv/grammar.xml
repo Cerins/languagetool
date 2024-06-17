@@ -176,8 +176,10 @@ Please replace it with a proper ruleset for Latvian language -->
             <rule id="VĀRDKOPU_KALKS_14" name="Runāt par svarīgu jautājumu">
                 <pattern>
                     <token inflected="yes">Pieskarties</token>
+		    <token>svarīgam</token>
+		    <token>jautājumam</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt par</match>svarīgu jautājumu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt</match> par</match> svarīgu</suggestion> jautājumu</suggestion>?</message>
                 <example>Runāt par svarīgu jautājumu</example>
             </rule>
         </rulegroup>
