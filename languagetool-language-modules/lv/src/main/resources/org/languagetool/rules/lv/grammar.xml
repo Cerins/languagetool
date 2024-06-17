@@ -238,4 +238,22 @@ Please replace it with a proper ruleset for Latvian language -->
             </rule>
         </rulegroup>
     </category>
+    <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
+        <rule id="SAIKĻU_KOMATI_1" name="Teikumu daļu saikli">
+            <antipattern>
+                <token regexp="yes">\p{Punct}|–|—<exception postag="SENT_START"/></token>
+                <token>bet|jo</token>
+                <token>lai</token>
+                <example>Bet lai paspētu, jāiziet agrāk</example>
+            </antipattern>
+            <pattern case_sensitive="yes">
+                <token negate="yes" regexp="yes">\p{Punct}|–|—<exception postag="SENT_START"/></token>
+                <marker><token regexp="yes">bet|jo|lai</token></marker>
+                <token></token>
+            </pattern>
+            <message>Pirms saikļa “\2” jāliek komats: <suggestion>\1, \2 \3</suggestion> </message>
+            <example>Ir saulaina diena, bet sola lietu</example>
+            <example correction="diena, bet sola">Ir saulaina diena, <marker>bet</marker> sola lietu.</example>
+        </rule>
+    </category>
 </rules>
