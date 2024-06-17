@@ -260,6 +260,7 @@ Please replace it with a proper ruleset for Latvian language -->
         </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
+        <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
         <rule id="SAIKĻU_KOMATI_1" name="Teikumu daļu saikli">
             <antipattern>
                 <token regexp="yes">\p{Punct}|–|—<exception postag="SENT_START"/></token>
@@ -300,6 +301,18 @@ Please replace it with a proper ruleset for Latvian language -->
             <pattern>
                 <token spaceafter="yes">-</token>
                 <message>Ap defisēm nekad nav atstarpes: <suggestion>\1</suggestion></message>
+            </pattern>
+        </rule>
+        <rule id="DOMUZĪME_1" name="Atstarpes ap domuzīmēm">
+            <pattern>
+                <token spacebefore="no">—</token>
+                <message>Ap domuzīmēm vienmēr ir atstapres: <suggestion> \1 </suggestion></message>
+            </pattern>
+        </rule>
+        <rule id="DOMUZĪME_2" name="Atstarpes ap domuzīmēm">
+            <pattern>
+                <token spaceafter="no">—</token>
+                <message>Ap domuzīmēm vienmēr ir atstapres: <suggestion> \1 </suggestion></message>
             </pattern>
         </rule>
     </category>
