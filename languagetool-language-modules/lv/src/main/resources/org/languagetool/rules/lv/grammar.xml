@@ -147,7 +147,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token>pie</token>
 		    <token>jautājuma</token>
                 </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt</match> par</suggestion> jautājumu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt</match> par jautājumu</suggestion>?</message>
                 <example>Runāt par jautājumu</example>
             </rule>
         </rulegroup>
@@ -168,7 +168,7 @@ Please replace it with a proper ruleset for Latvian language -->
                     <token inflected="yes">Piekopt</token>
 		    <token>politiku</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Nodarboties</match> ar</match> politiku</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Nodarboties ar</match> politiku</suggestion>?</message>
                 <example>Nodarboties ar politiku</example>
             </rule>
         </rulegroup>
@@ -179,7 +179,7 @@ Please replace it with a proper ruleset for Latvian language -->
 		    <token>svarīgam</token>
 		    <token>jautājumam</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt</match> par</match> svarīgu</suggestion> jautājumu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt par</match> svarīgu jautājumu</suggestion>?</message>
                 <example>Runāt par svarīgu jautājumu</example>
             </rule>
         </rulegroup>
@@ -222,7 +222,7 @@ Please replace it with a proper ruleset for Latvian language -->
 		    <token>ar</token>
 		    <token>ceļošanu</token>	
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Aizrauties</match>  ar</match> ceļošanu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Aizrauties ar</match> ceļošanu</suggestion>?</message>
                 <example>Ieinteresēties par ceļošanu</example>
             </rule>
         </rulegroup>
