@@ -156,8 +156,9 @@ Please replace it with a proper ruleset for Latvian language -->
                 <pattern>
                     <token inflected="yes">Pāriet</token>
                     <token>uz</token>
+		    <token>sistēmu</token>
                 </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieviest</match>sistēmu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieviest</match> sistēmu</suggestion>?</message>
                 <example>Ieviest sistēmu</example>
             </rule>
         </rulegroup>
