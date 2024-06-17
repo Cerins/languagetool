@@ -255,7 +255,7 @@ Please replace it with a proper ruleset for Latvian language -->
 		    <token>grafikā</token>
 		    </pattern>
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ievērot</match> grafiku</suggestion>?</message>
-                <example>Turpināt sarunu</example>
+                <example>Ievērot grafiku</example>
             </rule>
         </rulegroup>
     </category>
