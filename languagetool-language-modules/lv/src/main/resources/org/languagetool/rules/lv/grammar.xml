@@ -237,6 +237,17 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>Sākt darbu</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_21" name="Turpināt sarunu">
+                <pattern>
+                    <token inflected="yes">Atgriezties</token>
+		    <token>pie</token>
+		    <token>sarunas</token>	
+                    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Turpināt</match> sarunu</suggestion>?</message>
+                <example>Turpināt sarunu</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <rule id="SAIKĻU_KOMATI_1" name="Teikumu daļu saikli">
