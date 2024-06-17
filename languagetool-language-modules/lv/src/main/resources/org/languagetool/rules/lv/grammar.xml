@@ -209,8 +209,9 @@ Please replace it with a proper ruleset for Latvian language -->
             <rule id="VĀRDKOPU_KALKS_18" name="Kontrolēt darbu">
                 <pattern>
                     <token inflected="yes">Sekot</token>
+		    <token>darbam</token>	
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Kontrolēt</match>darbu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Kontrolēt</match> darbu</suggestion>?</message>
                 <example>Kontrolēt darbu</example>
             </rule>
         </rulegroup>
