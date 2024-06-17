@@ -320,6 +320,17 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>pievērst uzmanību standartiem</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_29" name="audzināšana atbilstoši tradīcijām">
+                <pattern>
+                    <token inflected="yes">audzināšana</token>
+		    <token>uz</token>
+		    <token>tradīcijām</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">audzināšana</match> atbilstoši</match> tradīcijām</suggestion>?</message>
+                <example>audzināšana atbilstoši tradīcijām</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
