@@ -199,8 +199,9 @@ Please replace it with a proper ruleset for Latvian language -->
                 <pattern>
                     <token inflected="yes">Pieturēties</token>
 		    <token>pie</token>
+		    <token>plāna</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pildīt</match>plānu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pildīt</match> plānu</suggestion>?</message>
                 <example>Pildīt plānu</example>
             </rule>
         </rulegroup>
