@@ -299,7 +299,17 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Nodot</match> ekspluatācijā</suggestion>?</message>
                 <example>Nodot ekspluatācijā</example>
             </rule>
-        </rulegroup>    
+        </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_27" name="veikt pasākumus">
+                <pattern>
+                    <token inflected="yes">Pieņemt</token>
+		    <token>pasākumus</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Veikt</match> pasākumus</suggestion>?</message>
+                <example>veikt pasākumus</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
