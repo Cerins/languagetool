@@ -290,5 +290,11 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Pēc mēneša dienas skaitļa jāliek puntks: <suggestion>\1. \2</suggestion></message>
             </pattern>
         </rule>
+        <rule id="DEFISE_ATSTARPES" name="Ap defisēm nav atstarpju">
+            <pattern>
+                <token spacebefore="yes" spaceafter="yes">-</token>
+                <message>Ap defisēm nekad nav atstarpes: <suggestion> \1 </suggestion></message>
+            </pattern>
+        </rule>
     </category>
 </rules>
