@@ -255,5 +255,19 @@ Please replace it with a proper ruleset for Latvian language -->
             <example>Ir saulaina diena, bet sola lietu</example>
             <example correction="diena, bet sola">Ir saulaina diena, <marker>bet</marker> sola lietu.</example>
         </rule>
+        <rule id="KĀRTAS_SKAITĻI_GADS" name="Punkts pēc gada">
+            <pattern><!-- NNNN. gada NN. [mēnesis] -->
+                <token regexp="yes">[0-9]{4}</token>
+                <token>gada</token>
+                <message>Pēc gadskaitļa jāliek puntks: <suggestion>\1. \2</suggestion></message>
+            </pattern>
+        </rule>
+        <rule id="KĀRTAS_SKAITĻI_MĒNEŠI" name="Punkts mēneša">
+            <pattern><!-- NNNN. gada NN. [mēnesis] -->
+                <token regexp="yes">[0-9][0-9]?</token>
+                <token regexp="yes">janvāris|februāris|marts|aprīlis|maijs|jūnijs|jūlijs|augusts|septembris|oktobris|novembris|decembris</token>
+                <message>Pēc mēneša dienas skaitļa jāliek puntks: <suggestion>\1. \2</suggestion></message>
+            </pattern>
+        </rule>
     </category>
 </rules>
