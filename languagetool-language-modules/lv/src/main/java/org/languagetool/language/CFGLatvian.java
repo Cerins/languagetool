@@ -3,9 +3,12 @@ package org.languagetool.language;
 import lv.semti.morphology.analyzer.Analyzer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.languagetool.JLanguageTool;
 import org.languagetool.Language;
 import org.languagetool.UserConfig;
+import org.languagetool.broker.ResourceDataBroker;
 import org.languagetool.rules.*;
+import org.languagetool.rules.lv.CFGRuleFactory;
 import org.languagetool.rules.lv.ExampleCFGRule;
 import org.languagetool.rules.lv.MorfologikLatvianSpellerRule;
 import org.languagetool.synthesis.Synthesizer;
@@ -14,9 +17,7 @@ import org.languagetool.tagging.Tagger;
 import org.languagetool.tagging.lv.LatvianTagger;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class CFGLatvian extends Language {
 
@@ -56,9 +57,7 @@ public class CFGLatvian extends Language {
 
   @Override
   public List<Rule> getRelevantRules(ResourceBundle messages, UserConfig userConfig, Language motherTongue, List<Language> altLanguages) throws IOException {
-    return Arrays.asList(
-      new ExampleCFGRule()
-    );
+    return CFGRuleFactory.allCFGRules();
   }
 
   @Override
@@ -72,4 +71,15 @@ public class CFGLatvian extends Language {
   public Synthesizer createDefaultSynthesizer() {
     return new LatvianSynthesizer(getAnalyzer());
   }
+
+  @Override
+  public List<String> getRuleFileNames() {
+    List<String> s = new ArrayList<>();
+    ResourceDataBroker dataBroker = JLanguageTool.getDataBroker();
+    s.add(dataBroker.getRulesDir() +
+      "/" + getShortCode() + "/"  + "empty.xml"
+    );
+    return s;
+  }
+
 }

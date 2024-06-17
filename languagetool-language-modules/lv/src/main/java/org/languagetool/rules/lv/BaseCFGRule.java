@@ -22,17 +22,6 @@ public abstract class BaseCFGRule extends Rule {
   abstract protected CFG getError();
 
   abstract protected String getMessage();
-//  public
-
-//  @Override
-//  public String getId() {
-//    return null;
-//  }
-//
-//  @Override
-//  public String getDescription() {
-//    return null;
-//  }
 
   @Override
   public RuleMatch[] match(AnalyzedSentence sentence) throws IOException {
@@ -44,8 +33,15 @@ public abstract class BaseCFGRule extends Rule {
         cfgSentence[i] = new LinkedList<>();
         List<AnalyzedToken> tk = rawItem.getReadings();
         for(AnalyzedToken t: tk) {
+          String base = t.getLemma();
+          if(base == null) {
+            base = t.getToken();
+          }
+          if(base == null) {
+            base = "";
+          }
           Token cfgToken = new Token(
-            t.getLemma(),
+            base,
             t.getPOSTag(),
             i
           );
@@ -95,7 +91,7 @@ public abstract class BaseCFGRule extends Rule {
       new RuleMatch(
         this,
         start,
-        end,
+        end + 1,
         getMessage()
       )
     };
