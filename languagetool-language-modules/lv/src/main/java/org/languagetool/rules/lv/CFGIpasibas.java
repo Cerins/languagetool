@@ -5,17 +5,17 @@ import org.languagetool.cfg.rules.ConcatCFGRule;
 import org.languagetool.cfg.rules.ITagMatcher;
 import org.languagetool.cfg.rules.TerminalCFGRule;
 
-public class CFGConcatMatchPlural extends BaseCFGRule {
+public class CFGIpasibas extends BaseCFGRule {
 
-  private class PlMismatch implements ITagMatcher {
+  private class IpasibasMistmatch implements ITagMatcher {
 
     @Override
     public boolean matches(String tag1, String tag2) {
       if(tag1 == null || tag1.length() < 4) return false;
       if(tag2 == null || tag2.length() < 4) return false;
-      char ch1 = tag1.charAt(3);
-      char ch2 = tag2.charAt(3);
-      return ch1 != ch2;
+      if(tag1.charAt(0) != 'a' || tag2.charAt(0) != 'n') return false;
+      return tag1.charAt(3) != tag2.charAt(3) ||
+        tag1.charAt(2) != tag2.charAt(2);
     }
 
     @Override
@@ -24,30 +24,13 @@ public class CFGConcatMatchPlural extends BaseCFGRule {
     }
   }
 
-  private class InheritRightTag implements  ITagMatcher {
-    @Override
-    public boolean matches(String tag1, String tag2) {
-      return true;
-    }
-
-    @Override
-    public String parentTag(String tag1, String tag2) {
-      return tag2;
-    }
-  }
-
-  private class PlMmatch implements ITagMatcher {
+  private class IpasibasMatch implements ITagMatcher {
 
     @Override
     public boolean matches(String tag1, String tag2) {
       if(tag1 == null || tag1.length() < 4) return false;
       if(tag2 == null || tag2.length() < 4) return false;
-      char ch1 = tag1.charAt(3);
-      char ch2 = tag2.charAt(3);
-      if(tag1.startsWith("n") && tag2.startsWith("n")) return true;
-      if(tag1.startsWith("n") && tag2.startsWith("p")) return true;
-      if(tag1.startsWith("p") && tag2.startsWith("n")) return true;
-      return ch1 == ch2;
+      return false;
     }
 
     @Override
@@ -58,24 +41,24 @@ public class CFGConcatMatchPlural extends BaseCFGRule {
 
   @Override
   public String getId() {
-    return "PLURAL_CONCAT_CFG_RULE";
+    return "IPASIBAS_MISMATCH_CFG_RULE";
   }
 
   @Override
   public String getDescription() {
-    return "Un, vai savienotiem vārdiem jābūt vienādā skaitlī";
+    return "Ipašības vārda galotne neatbilst lietvārdam.";
   }
 
   @Override
   protected CFG getAllowed() {
     CFG allowed = new CFG()
       .addRule(
-      new ConcatCFGRule(
-        CFG.START_SYMBOL,
-        "B",
-        "A"
+        new ConcatCFGRule(
+          CFG.START_SYMBOL,
+          "B",
+          "A"
+        )
       )
-    )
       .addRule(
         new ConcatCFGRule(
           CFG.START_SYMBOL,
@@ -113,29 +96,15 @@ public class CFGConcatMatchPlural extends BaseCFGRule {
       .addRule(
         new ConcatCFGRule(
           "B",
+          "I",
           "V",
-          "U",
-          new PlMmatch()
-        )
-      )
-      .addRule(
-        new ConcatCFGRule(
-          "U",
-          "SAV",
-          "V",
-          new InheritRightTag()
+          new IpasibasMatch()
         )
       )
       .addRule(
         new TerminalCFGRule(
-          "SAV",
-          "vai"
-        )
-      )
-      .addRule(
-        new TerminalCFGRule(
-          "SAV",
-          "un"
+          "I",
+          null
         )
       )
       .addRule(
@@ -194,29 +163,15 @@ public class CFGConcatMatchPlural extends BaseCFGRule {
       .addRule(
         new ConcatCFGRule(
           "B",
+          "I",
           "V",
-          "U",
-          new PlMismatch()
-        )
-      )
-      .addRule(
-        new ConcatCFGRule(
-          "U",
-          "SAV",
-          "V",
-          new InheritRightTag()
+          new IpasibasMistmatch()
         )
       )
       .addRule(
         new TerminalCFGRule(
-          "SAV",
-          "vai"
-        )
-      )
-      .addRule(
-        new TerminalCFGRule(
-          "SAV",
-          "un"
+          "I",
+          null
         )
       )
       .addRule(

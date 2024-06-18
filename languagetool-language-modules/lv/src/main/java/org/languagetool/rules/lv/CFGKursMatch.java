@@ -5,16 +5,17 @@ import org.languagetool.cfg.rules.ConcatCFGRule;
 import org.languagetool.cfg.rules.ITagMatcher;
 import org.languagetool.cfg.rules.TerminalCFGRule;
 
-public class CFGConcatMatchPlural extends BaseCFGRule {
+public class CFGKursMatch extends BaseCFGRule {
 
   private class PlMismatch implements ITagMatcher {
 
     @Override
     public boolean matches(String tag1, String tag2) {
       if(tag1 == null || tag1.length() < 4) return false;
-      if(tag2 == null || tag2.length() < 4) return false;
+      if(tag2 == null || tag2.length() < 5) return false;
+      if(tag1.charAt(0) != 'n' &&  tag2.charAt(1) != 'p') return false;
       char ch1 = tag1.charAt(3);
-      char ch2 = tag2.charAt(3);
+      char ch2 = tag2.charAt(4);
       return ch1 != ch2;
     }
 
@@ -58,92 +59,17 @@ public class CFGConcatMatchPlural extends BaseCFGRule {
 
   @Override
   public String getId() {
-    return "PLURAL_CONCAT_CFG_RULE";
+    return "KURS_CFG_RULE";
   }
 
   @Override
   public String getDescription() {
-    return "Un, vai savienotiem vārdiem jābūt vienādā skaitlī";
+    return "Kurš jābūt saskaņotam.";
   }
 
   @Override
   protected CFG getAllowed() {
-    CFG allowed = new CFG()
-      .addRule(
-      new ConcatCFGRule(
-        CFG.START_SYMBOL,
-        "B",
-        "A"
-      )
-    )
-      .addRule(
-        new ConcatCFGRule(
-          CFG.START_SYMBOL,
-          "A",
-          "B"
-        )
-      )
-      .addRule(
-        new ConcatCFGRule(
-          CFG.START_SYMBOL,
-          "A",
-          "C"
-        )
-      )
-      .addRule(
-        new ConcatCFGRule(
-          "C",
-          "B",
-          "A"
-        )
-      )
-      .addRule(
-        new ConcatCFGRule(
-          "A",
-          "A",
-          "A"
-        )
-      )
-      .addRule(
-        new TerminalCFGRule(
-          "A",
-          null
-        )
-      )
-      .addRule(
-        new ConcatCFGRule(
-          "B",
-          "V",
-          "U",
-          new PlMmatch()
-        )
-      )
-      .addRule(
-        new ConcatCFGRule(
-          "U",
-          "SAV",
-          "V",
-          new InheritRightTag()
-        )
-      )
-      .addRule(
-        new TerminalCFGRule(
-          "SAV",
-          "vai"
-        )
-      )
-      .addRule(
-        new TerminalCFGRule(
-          "SAV",
-          "un"
-        )
-      )
-      .addRule(
-        new TerminalCFGRule(
-          "V",
-          null
-        )
-      );
+    CFG allowed = new CFG();
     return allowed;
   }
 
@@ -202,21 +128,27 @@ public class CFGConcatMatchPlural extends BaseCFGRule {
       .addRule(
         new ConcatCFGRule(
           "U",
-          "SAV",
-          "V",
+          "KOM",
+          "KUR",
           new InheritRightTag()
         )
       )
       .addRule(
         new TerminalCFGRule(
-          "SAV",
-          "vai"
+          "KOM",
+          ","
         )
       )
       .addRule(
         new TerminalCFGRule(
-          "SAV",
-          "un"
+          "U",
+          "kurš"
+        )
+      )
+      .addRule(
+        new TerminalCFGRule(
+          "KUR",
+          "kurš"
         )
       )
       .addRule(
@@ -231,6 +163,6 @@ public class CFGConcatMatchPlural extends BaseCFGRule {
 
   @Override
   protected String getMessage() {
-    return "Nesaskaņots skaitlis pamanīts.";
+    return "Pamanīts nesaskaņots kurš.";
   }
 }

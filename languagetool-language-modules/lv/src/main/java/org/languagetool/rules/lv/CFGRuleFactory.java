@@ -11,7 +11,10 @@ public class CFGRuleFactory {
 
   public static List<Rule> allCFGRules() {
     return Arrays.asList(
-      new CFGConcatMatchPlural()
+      new CFGConcatMatchPlural(),
+      new CFGKursMatch(),
+      new CFGKada()
+//      new CFGIpasibas()
     );
   }
 }

@@ -18,6 +18,13 @@ public class CFGLatvianTest {
     System.out.println(mistakes);
     assertTrue(mistakes.size() > 0);
   }
+  @Test
+  public void testConcatPlCommaRule() throws IOException {
+    final JLanguageTool tool = new JLanguageTool(new CFGLatvian());
+    List<RuleMatch> mistakes = tool.check("Mums jau ir klienti ar šādiem vai lielākiem, vai mazāku ātrumu.");
+    System.out.println(mistakes);
+    assertTrue(mistakes.size() > 0);
+  }
 
   @Test
   public void testConcatPlRuleMismatch() throws IOException {
@@ -25,5 +32,29 @@ public class CFGLatvianTest {
     List<RuleMatch> mistakes = tool.check("- No bodes tev ko atnest ?");
     System.out.println(mistakes);
     assertTrue(mistakes.size() == 0);
+  }
+
+  @Test
+  public void testMatchIpasibas() throws IOException {
+    final  JLanguageTool tool = new JLanguageTool(new CFGLatvian());
+    List<RuleMatch> mistakes = tool.check("Lieli skandāls šovbiznesa dzīvē izcēlies");
+    System.out.println(mistakes);
+    assertTrue(mistakes.size() > 0);
+  }
+
+  @Test
+  public void testMatchKuri() throws  IOException {
+    final  JLanguageTool tool = new JLanguageTool(new CFGLatvian());
+    List<RuleMatch> mistakes = tool.check("Tur bija attēlota boa čūska, kuri sagremo ziloni.");
+    System.out.println(mistakes);
+    assertTrue(mistakes.size() > 0);
+  }
+
+  @Test
+  public void testMatchKads() throws  IOException {
+    final  JLanguageTool tool = new JLanguageTool(new CFGLatvian());
+    List<RuleMatch> mistakes = tool.check("Kādas komandu mūsējie pārstāvēja?");
+    System.out.println(mistakes);
+    assertTrue(mistakes.size() > 0);
   }
 }

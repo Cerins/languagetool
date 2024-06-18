@@ -40,9 +40,9 @@ public class TerminalCFGRule extends CFGRule {
       // Inherit tags from given symbol
       // This is needed to get the place
       // TODO change
-      if(right[0] == null) {
-        s[0].setInitialPosition(null);
-      }
+//      if(right[0] == null) {
+//        s[0].setInitialPosition(null);
+//      }
       Symbol res = new Symbol(false, left.getValue(), s[0].getTag(), null);
       res.setChildren(s);
       return res;
@@ -54,4 +54,5 @@ public class TerminalCFGRule extends CFGRule {
   public CFGRuleType getRuleType() {
     return CFGRuleType.ONE_TERMINAL;
   }
+
 }
