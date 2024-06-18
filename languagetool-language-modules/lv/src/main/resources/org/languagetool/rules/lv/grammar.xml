@@ -489,6 +489,16 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>kontrolēt</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_45" name="nolemt">
+                <pattern>
+                    <token inflected="yes">Iznest</token>
+		    <token>lēmumu</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Nolemt</match>?</message>
+                <example>nolemt</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
