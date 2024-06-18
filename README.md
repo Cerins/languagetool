@@ -111,3 +111,20 @@ Now you can use the bleeding edge development copy of LanguageTool `*.jar` files
 
 Unless otherwise noted, this software - the LanguageTool core - is distributed under the LGPL, see
 file [COPYING.txt](https://github.com/languagetool-org/languagetool/blob/master/COPYING.txt).
+
+## Prerequisites 
+
+The Latvian module requires https://github.com/PeterisP/morphology.git installed locally.
+
+Steps to do so:
+1. `git clone https://github.com/PeterisP/morphology.git`
+2. `cd morphology`
+3. `mvn install -DskipTests`
+4. `mvn install:install-file \
+   -Dfile=./target/morphology-2.5.4-SNAPSHOT.jar \
+   -DgroupId=lv.ailab.morphology \
+   -DartifactId=morphology \
+   -Dversion=2.5.4-SNAPSHOT \
+   -Dpackaging=jar`
+
+After this the languagetool project can be installed as normal.
