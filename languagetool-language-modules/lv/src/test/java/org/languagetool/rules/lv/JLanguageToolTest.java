@@ -15,7 +15,6 @@ public class JLanguageToolTest {
   @Test
   public void testBecause() throws IOException {
     final JLanguageTool tool = new JLanguageTool(new Latvian());
-//    List<RuleMatch> mistakes = tool.check("Ņēma vārdu");
     List<RuleMatch> mistakes = tool.check("Dēļ aukstuma auto nedarbojās.");
     System.out.println(mistakes);
     assertEquals(1, mistakes.size());
@@ -23,7 +22,6 @@ public class JLanguageToolTest {
   @Test
   public void testNemtVardu() throws IOException {
     final JLanguageTool tool = new JLanguageTool(new Latvian());
-//    List<RuleMatch> mistakes = tool.check("Ņēma vārdu");
     List<RuleMatch> mistakes = tool.check("Viņš ņēma vārdu.");
     System.out.println(mistakes);
     assertEquals(1, mistakes.size());
