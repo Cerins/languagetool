@@ -388,6 +388,17 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>sarakstīties</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_35" name="tāpēc">
+                <pattern>
+                    <token inflected="yes">Sakarā</token>
+		    <token>ar</token>
+		    <token>to</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Tāpēc</match>?</message>
+                <example>tāpēc</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
