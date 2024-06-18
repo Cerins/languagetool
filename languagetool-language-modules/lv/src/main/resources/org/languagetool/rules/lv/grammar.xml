@@ -429,6 +429,16 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>apmācīt</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_39" name="balsot">
+                <pattern>
+                    <token inflected="yes">Nodot</token>
+		    <token>balsi</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Balsot</match>?</message>
+                <example>balsot</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
