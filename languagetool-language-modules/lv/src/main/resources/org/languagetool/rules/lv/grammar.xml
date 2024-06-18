@@ -520,6 +520,16 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>piedalīties</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_49" name="remontēt">
+                <pattern>
+                    <token inflected="yes">Izvest</token>
+		    <token>remontu</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">remontēt</match>?</message>
+                <example>remontēt</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
