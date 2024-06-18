@@ -449,6 +449,16 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>dāvināt</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_41" name="dienēt">
+                <pattern>
+                    <token inflected="yes">Nest</token>
+		    <token>dienestu</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Dienēt</match>?</message>
+                <example>dienēt</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
