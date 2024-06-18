@@ -1,31 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/print.xsl" title="Pretty print" ?>
 <?xml-stylesheet type="text/css" href="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.css" title="Easy editing stylesheet" ?>
-<!--
-Slovenian Grammar and Typo Rules for LanguageTool
-Copyright (C) 2008, 2009, 2010, 2011 Martin Srebotnjak
-
-Thanks to Marcin Miłkowski.
-
-This library is free software; you can redistribute it and/or
-modify it under the terms of the GNU Lesser General Public
-License as published by the Free Software Foundation; either
-version 2.1 of the License, or (at your option) any later version.
-
-This library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-Lesser General Public License for more details.
-
-You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
--->
-<!-- TODO This ruleset was copied from Slovenian ruleset
-Please replace it with a proper ruleset for Latvian language -->
 <rules lang="lv" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.xsd">
     <category id="STYLE_1" name="Stila kļūdas">
-        <rulegroup id="POSITION_1" name="Pozicījas kļūda">
             <rule id="BECAUSE_1" name="Dēļ novietojums">
                 <pattern>
                     <token>dēļ</token>
@@ -34,8 +11,6 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="2" /> dēļ</suggestion></message>
                 <example>Apstākļu dēļ</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_1" name="Lūgt vārdu">
                 <pattern>
                     <token inflected="yes">ņemt</token>
@@ -44,8 +19,6 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">lūgt</match> vārdu</suggestion>?</message>
                 <example>Lūgt vārdu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_2" name="Iegūt pirmo vietu">
                 <pattern>
                     <token inflected="yes">ņemt</token>
@@ -55,8 +28,6 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">iegūt</match> pirmo vietu</suggestion>?</message>
                 <example>Iegūt pirmo vietu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_3" name="Izvirzīt jautājumu">
                 <pattern>
                     <token inflected="yes">Pacelt</token>
@@ -65,38 +36,30 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</match> jautājumu</suggestion>?</message>
                 <example>Izvirzīt jautājumu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_4" name="Minēt piemērus">
                 <pattern>
                     <token inflected="yes">pievest</token>
                     <token>piemērus</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Minēt</match> piemērus</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">minēt</match> piemērus</suggestion>?</message>
                 <example>Minēt piemērus</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_5" name="Pievērst uzmanību">
                 <pattern>
                     <token inflected="yes">piegriezt</token>
                     <token>uzmanību</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pievērst</match> uzmanību</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">pievērst</match> uzmanību</suggestion>?</message>
                 <example>Pievērst uzmanību</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_6" name="Izvirzīt jautājumu">
                 <pattern>
                     <token inflected="yes">stādīt</token>
                     <token>jautājumu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Izvirzīt</match> jautājumu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</match> jautājumu</suggestion>?</message>
                 <example>Izvirzīt jautājumu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_7" name="Ieteikt pirmo variantu">
                 <pattern>
                     <token inflected="yes">Iestāties</token>
@@ -104,32 +67,26 @@ Please replace it with a proper ruleset for Latvian language -->
 		    <token>pirmo</token>
 		    <token>variantu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieteikt</match> pirmo variantu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">ieteikt</match> pirmo variantu</suggestion>?</message>
                 <example>Ieteikt pirmo variantu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_8" name="Censties noslēgt līgumu">
                 <pattern>
                     <token inflected="yes">Iet</token>
                     <token>uz</token>
 		    <token>līgumu</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Censties</match> noslēgt</match> līgumu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">censties</match> noslēgt līgumu</suggestion>?</message>
                 <example>Censties noslēgt līgumu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_9" name="Runāt par jautājumiem">
                 <pattern>
                     <token inflected="yes">Cilāt</token>
                     <token>jautājumus</token>	
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Runāt</match> par jautājumiem</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt</match> par jautājumiem</suggestion>?</message>
                 <example>Runāt par jautājumiem</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_10" name="Radīt protestu">
                 <pattern>
                     <token inflected="yes">novest</token>
@@ -139,8 +96,6 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">radīt</match> protestu</suggestion>?</message>
                 <example>Radīt protestu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_11" name="Runāt par jautājumu">
                 <pattern>
                     <token inflected="yes">pakavēties</token>
@@ -150,29 +105,23 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt</match> par jautājumu</suggestion>?</message>
                 <example>Runāt par jautājumu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_12" name="Ieviest sistēmu">
                 <pattern>
                     <token inflected="yes">Pāriet</token>
                     <token>uz</token>
 		    <token>sistēmu</token>
                 </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ieviest</match> sistēmu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">ieviest</match> sistēmu</suggestion>?</message>
                 <example>Ieviest sistēmu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_13" name="Nodarboties ar politiku">
                 <pattern>
                     <token inflected="yes">Piekopt</token>
 		    <token>politiku</token>
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Nodarboties ar</match> politiku</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">nodarboties ar</match> politiku</suggestion>?</message>
                 <example>Nodarboties ar politiku</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_14" name="Runāt par svarīgu jautājumu">
                 <pattern>
                     <token inflected="yes">Pieskarties</token>
@@ -182,8 +131,6 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">runāt par</match> svarīgu jautājumu</suggestion>?</message>
                 <example>Runāt par svarīgu jautājumu</example>
             </rule>
-        </rulegroup>
-        <rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_15" name="Ievērot instrukciju">
                 <pattern>
                     <token inflected="yes">Pieturēties</token>
@@ -193,8 +140,6 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">ievērot</match> instrukciju</suggestion>?</message>
                 <example>Ievērot instrukciju</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_16" name="Pildīt plānu">
                 <pattern>
                     <token inflected="yes">Pieturēties</token>
@@ -204,72 +149,58 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pildīt</match> plānu</suggestion>?</message>
                 <example>Pildīt plānu</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_18" name="Kontrolēt darbu">
                 <pattern>
                     <token inflected="yes">Sekot</token>
 		    <token>darbam</token>	
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Kontrolēt</match> darbu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">kontrolēt</match> darbu</suggestion>?</message>
                 <example>Kontrolēt darbu</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_19" name="Aizrauties ar ceļošanu">
                 <pattern>
                     <token inflected="yes">Saslimt</token>
 		    <token>ar</token>
 		    <token>ceļošanu</token>	
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Aizrauties ar</match> ceļošanu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">aizrauties ar</match> ceļošanu</suggestion>?</message>
                 <example>Ieinteresēties par ceļošanu</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_20" name="Sākt darbu">
                 <pattern>
                     <token inflected="yes">Stāties</token>
 		    <token>pie</token>
 		    <token>darba</token>	
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Sākt</match> darbu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">sākt</match> darbu</suggestion>?</message>
                 <example>Sākt darbu</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_21" name="Turpināt sarunu">
                 <pattern>
                     <token inflected="yes">Atgriezties</token>
 		    <token>pie</token>
 		    <token>sarunas</token>	
                     </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Turpināt</match> sarunu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">turpināt</match> sarunu</suggestion>?</message>
                 <example>Turpināt sarunu</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_22" name="Ievērot grafiku">
                 <pattern>
                     <token inflected="yes">Iekļauties</token>
 		    <token>grafikā</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ievērot</match> grafiku</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">ievērot</match> grafiku</suggestion>?</message>
                 <example>Ievērot grafiku</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_23" name="spriest pēc datiem">
                 <pattern>
                     <token inflected="yes">Iziet</token>
 		    <token>no</token>
 		    <token>datiem</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Spriest</match> pēc</match> datiem</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">spriest</match> pēc datiem</suggestion>?</message>
                 <example>spriest pēc datiem</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_24" name="pārvarēt grūtības">
                 <pattern>
                     <token inflected="yes">Iziet</token>
@@ -279,28 +210,22 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">pārvarēt</match> grūtības</suggestion>?</message>
                 <example>pārvarēt grūtības</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_25" name="Ļoti patikt">
                 <pattern>
                     <token inflected="yes">Labi</token>
 		    <token>patikt</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Ļoti</match> patikt</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">ļoti</match> patikt</suggestion>?</message>
                 <example>Ļoti patikt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_26" name="Nodot ekspluatācijā">
                 <pattern>
                     <token inflected="yes">Laist</token>
 		    <token>darbā</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Nodot</match> ekspluatācijā</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">nodot</match> ekspluatācijā</suggestion>?</message>
                 <example>Nodot ekspluatācijā</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_27" name="veikt pasākumus">
                 <pattern>
                     <token inflected="yes">Pieņemt</token>
@@ -309,40 +234,32 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Veikt</match> pasākumus</suggestion>?</message>
                 <example>veikt pasākumus</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_28" name="pievērst uzmanību standartiem">
                 <pattern>
                     <token inflected="yes">Ņemt</token>
 		    <token>standartus</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pievērst</match> uzmanību</match> standartiem</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">pievērst</match> uzmanību standartiem</suggestion>?</message>
                 <example>pievērst uzmanību standartiem</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_29" name="audzināšana atbilstoši tradīcijām">
                 <pattern>
                     <token inflected="yes">audzināšana</token>
 		    <token>uz</token>
 		    <token>tradīcijām</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">audzināšana</match> atbilstoši</match> tradīcijām</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">audzināšana</match> atbilstoši tradīcijām</suggestion>?</message>
                 <example>audzināšana atbilstoši tradīcijām</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_30" name="strādāt par grāmatvedi ">
                 <pattern>
                     <token inflected="yes">Izpildīt</token>
 		    <token>grāmatveža</token>
 		    <token>vietu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Strādāt</match> par</match> grāmatvedi</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">strādāt</match> par grāmatvedi</suggestion>?</message>
                 <example>strādāt par grāmatvedi </example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_31" name="izvirzīt pretenzijas iestādei">
                 <pattern>
                     <token inflected="yes">Izvirzīt</token>
@@ -350,11 +267,9 @@ Please replace it with a proper ruleset for Latvian language -->
 		    <token>iestādes</token>
 		    <token>adresē</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Izvirzīt</match> pretenzijas</match> iestādei</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izvirzīt</match> pretenzijas iestādei</suggestion>?</message>
                 <example>izvirzīt pretenzijas iestādei</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_32" name="pakļaut briesmām">
                 <pattern>
                     <token inflected="yes">Nostādīt</token>
@@ -364,8 +279,6 @@ Please replace it with a proper ruleset for Latvian language -->
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">pakļaut</match> briesmām</suggestion>?</message>
                 <example>pakļaut briesmām</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_33" name="izlikties par poliglotu">
                 <pattern>
                     <token inflected="yes">Tēlot</token>
@@ -373,193 +286,156 @@ Please replace it with a proper ruleset for Latvian language -->
 		    <token>sevis</token>
 		    <token>poliglotu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Izlikties</match> par</match> poliglotu</suggestion>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">izlikties</match> par poliglotu</suggestion>?</message>
                 <example>izlikties par poliglotu</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_34" name="sarakstīties">
                 <pattern>
                     <token inflected="yes">Apmainīties</token>
 		    <token>ar</token>
 		    <token>vēstulēm</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Sarakstīties</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">sarakstīties</match></suggestion>?</message>
                 <example>sarakstīties</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_35" name="tāpēc">
                 <pattern>
                     <token inflected="yes">Sakarā</token>
 		    <token>ar</token>
 		    <token>to</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Tāpēc</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">tāpēc</match></suggestion>?</message>
                 <example>tāpēc</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_36" name="arī">
                 <pattern>
                     <token inflected="yes">Viņu</token>
 		    <token>skaitā</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">arī</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">arī</match></suggestion>?</message>
                 <example>arī</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_37" name="akcentēt">
                 <pattern>
                     <token inflected="yes">Uzlikt</token>
 		    <token>akcentu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Akcentēt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">akcentēt</match></suggestion>?</message>
                 <example>akcentēt</example>
             </rule>
-        </rulegroup>   
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_38" name="apmācīt">
                 <pattern>
                     <token inflected="yes">Dot</token>
 		    <token>apmācību</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Apmācīt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">apmācīt</match></suggestion>?</message>
                 <example>apmācīt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_39" name="balsot">
                 <pattern>
                     <token inflected="yes">Nodot</token>
 		    <token>balsi</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Balsot</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">balsot</match></suggestion>?</message>
                 <example>balsot</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_40" name="dāvināt">
                 <pattern>
                     <token inflected="yes">Taisīt</token>
 		    <token>dāvanu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Dāvināt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Dāvināt</match></suggestion>?</message>
                 <example>dāvināt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_41" name="dienēt">
                 <pattern>
                     <token inflected="yes">Nest</token>
 		    <token>dienestu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Dienēt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">dienēt</match></suggestion>?</message>
                 <example>dienēt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_42" name="iesākt">
                 <pattern>
                     <token inflected="yes">Likt</token>
 		    <token>sākumu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">iesākt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">iesākt</match></suggestion>?</message>
                 <example>iesākt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_43" name="koncertēt">
                 <pattern>
                     <token inflected="yes">Dot</token>
 		    <token>koncertu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">koncertēt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">koncertēt</match></suggestion>?</message>
                 <example>koncertēt</example>
             </rule>
-        </rulegroup> 
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_44" name="kontrolēt">
                 <pattern>
                     <token inflected="yes">Ņemt</token>
 		    <token>kontrolē</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Kontrolēt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">kontrolēt</match></suggestion>?</message>
                 <example>kontrolēt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_45" name="nolemt">
                 <pattern>
                     <token inflected="yes">Iznest</token>
 		    <token>lēmumu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Nolemt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">nolemt</match></suggestion>?</message>
                 <example>nolemt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_46" name="pārrunāt">
                 <pattern>
                     <token inflected="yes">Izvest</token>
 		    <token>pārrunas</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">Pārrunāt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">pārrunāt</match></suggestion>?</message>
                 <example>pārrunāt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_47" name="piedalīties">
                 <pattern>
                     <token inflected="yes">ņemt</token>
 		    <token regexp="yes">dalību|līdzdalību</token>
 		    <token>grafikā</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">piedalīties</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">piedalīties</match></suggestion>?</message>
                 <example>piedalīties</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_49" name="remontēt">
                 <pattern>
                     <token inflected="yes">Izvest</token>
 		    <token>remontu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">remontēt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">remontēt</match></suggestion>?</message>
                 <example>remontēt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_50" name="sakārtot">
                 <pattern>
                     <token inflected="yes">Savest</token>
 		    <token>kārtībā</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">sakārtot</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">sakārtot</match></suggestion>?</message>
                 <example>sakārtot</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_51" name="startēt">
                 <pattern>
                     <token inflected="yes">paņemt</token>
 		    <token>startu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">startēt</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">startēt</match></suggestion>?</message>
                 <example>startēt</example>
             </rule>
-        </rulegroup>
-	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
             <rule id="VĀRDKOPU_KALKS_52" name="ziņot">
                 <pattern>
                     <token inflected="yes">nodot</token>
 		    <token>ziņojumu</token>
 		    </pattern>
-                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">ziņot</match>?</message>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">ziņot</match></suggestion>?</message>
                 <example>ziņot</example>
             </rule>
-        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>

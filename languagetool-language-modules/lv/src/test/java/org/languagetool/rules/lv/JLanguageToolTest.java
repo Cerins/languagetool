@@ -28,4 +28,27 @@ public class JLanguageToolTest {
     System.out.println(mistakes);
     assertEquals(1, mistakes.size());
   }
+  @Test
+  public void testDienet() throws  IOException {
+    final JLanguageTool tool = new JLanguageTool(new Latvian());
+    List<RuleMatch> mistakes = tool.check("Viņš nesa dienestu.");
+    System.out.println(mistakes);
+    assertEquals(1, mistakes.size());
+  }
+
+  @Test
+  public void testLigums() throws  IOException {
+    final JLanguageTool tool = new JLanguageTool(new Latvian());
+    List<RuleMatch> mistakes = tool.check("Viņi gāja uz līgumu.");
+    System.out.println(mistakes);
+    assertEquals(1, mistakes.size());
+  }
+
+  @Test
+  public void testCilinat() throws  IOException {
+    final JLanguageTool tool = new JLanguageTool(new Latvian());
+    List<RuleMatch> mistakes = tool.check("Ciltāt jautājumus.");
+    System.out.println(mistakes);
+    assertEquals(1, mistakes.size());
+  }
 }
