@@ -399,6 +399,16 @@ Please replace it with a proper ruleset for Latvian language -->
                 <example>tāpēc</example>
             </rule>
         </rulegroup>
+	<rulegroup id="VĀRDKOPU_KALKI" name="Vārdkopu kalki">
+            <rule id="VĀRDKOPU_KALKS_36" name="arī">
+                <pattern>
+                    <token inflected="yes">Viņu</token>
+		    <token>skaitā</token>
+		    </pattern>
+                <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">arī</match>?</message>
+                <example>arī</example>
+            </rule>
+        </rulegroup>
     </category>
     <category id="PUNKTUĀCIJA" name="Interpunkcijas kļūdas">
         <url>https://www.lps.lv/uploads/docs_module/Hansons_interpunkcija.pdf</url>
