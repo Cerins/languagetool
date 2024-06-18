@@ -84,7 +84,7 @@ public class Latvian extends Language {
             new GenericUnpairedBracketsRule(messages,
                     Arrays.asList("[", "(", "{", "„", "»", "«", "\""),
                     Arrays.asList("]", ")", "}", "”", "«", "»", "\"")),
-            new MorfologikLatvianSpellerRule(messages, this, userConfig, altLanguages),
+//            new MorfologikLatvianSpellerRule(messages, this, userConfig, altLanguages),
             new UppercaseSentenceStartRule(messages, this),
             new WordRepeatRule(messages, this),
             new MultipleWhitespaceRule(messages, this)
