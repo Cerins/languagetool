@@ -408,7 +408,6 @@
                 <pattern>
                     <token inflected="yes">ņemt</token>
 		    <token regexp="yes">dalību|līdzdalību</token>
-		    <token>grafikā</token>
 		    </pattern>
                 <message>Vai gribēji ievadīt <suggestion><match no="1" postag=".*" case_conversion="preserve">piedalīties</match></suggestion>?</message>
                 <example>piedalīties</example>
