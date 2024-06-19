@@ -501,5 +501,12 @@
                 <message>Ap domuzīmēm vienmēr ir atstapres: <suggestion> \1 </suggestion></message>
             </pattern>
         </rule>
+        <rulegroup id="SLIKTI_DATUMI" name="Datumi, kuri nav iespējami">
+            <rule id="SLIKTS_FEBRUARIS" name="Slikts februāris">
+                <token regex="yes">30|31</token>
+                <token spacebefore="no">.</token>
+                <token regex="yes">februār(is|i|ī|im|a)</token>
+            </rule>
+        </rulegroup>
     </category>
 </rules>
