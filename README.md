@@ -1,3 +1,57 @@
+## Latvian Module
+
+The repository implements the Latvian module for the LanguageTool
+
+To see the module code visit https://github.com/Cerins/languagetool/tree/lv-module/languagetool-language-modules/lv.
+
+### Prerequisites
+
+The Latvian module requires https://github.com/PeterisP/morphology.git installed locally.
+
+Steps to do so:
+1. `git clone https://github.com/PeterisP/morphology.git`
+2. `cd morphology`
+3. `mvn install -DskipTests`
+4. `mvn install:install-file \
+   -Dfile=./target/morphology-2.5.4-SNAPSHOT.jar \
+   -DgroupId=lv.ailab.morphology \
+   -DartifactId=morphology \
+   -Dversion=2.5.4-SNAPSHOT \
+   -Dpackaging=jar`
+
+After this the languagetool project can be installed as normal.
+
+### Installation
+
+After completing the preprequisites the installation follows the standard lanuagetool installation.
+
+1. `git clone --depth=100 https://github.com/Cerins/languagetool` - depth 100 is chosen since it includes all the module commits
+2. `cd languagetool`
+3. `mvn install -DskipTests` - skips tests, since they take quite a lot of time, but it is better to remove the flag if the time is not a concern.
+
+### Running
+
+Should be done after completing installation steps.
+
+#### CLI
+
+1. `cd ./languagetool-standalone/target/LanguageTool-6.5-SNAPSHOT/LanguageTool-6.5-SNAPSHOT/`
+2. `echo "Šis ir pārbaudes teikums." | java -jar languagetool-commandline.jar -l lv`
+
+#### Firefox
+
+1. Install the languagetool extension
+2. `cd ./languagetool-standalone/target/LanguageTool-6.5-SNAPSHOT/LanguageTool-6.5-SNAPSHOT/`
+3. `touch server.properties`
+4. `touch org/languagetool/resource/lv/common_words.txt`
+5. `java -cp languagetool-server.jar org.languagetool.server.HTTPServer --config server.properties --port 8081 --allow-origin`
+6. Manage the languagetool extension and in advanced options set that server is localhost.
+
+#### LibreOffice
+
+The directory ./languagetool-office-extension/target should contain a zip, rename the *.zip to *.oxt to install it in LibreOffice/OpenOffice.
+
+
 ## LanguageTool
 
 **LanguageTool** is an Open Source proofreading software for English, Spanish, French, German,
@@ -112,19 +166,3 @@ Now you can use the bleeding edge development copy of LanguageTool `*.jar` files
 Unless otherwise noted, this software - the LanguageTool core - is distributed under the LGPL, see
 file [COPYING.txt](https://github.com/languagetool-org/languagetool/blob/master/COPYING.txt).
 
-## Prerequisites 
-
-The Latvian module requires https://github.com/PeterisP/morphology.git installed locally.
-
-Steps to do so:
-1. `git clone https://github.com/PeterisP/morphology.git`
-2. `cd morphology`
-3. `mvn install -DskipTests`
-4. `mvn install:install-file \
-   -Dfile=./target/morphology-2.5.4-SNAPSHOT.jar \
-   -DgroupId=lv.ailab.morphology \
-   -DartifactId=morphology \
-   -Dversion=2.5.4-SNAPSHOT \
-   -Dpackaging=jar`
-
-After this the languagetool project can be installed as normal.
